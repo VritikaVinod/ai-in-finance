@@ -1,8 +1,39 @@
-# StartupLens — Investor Intelligence Dashboard
+# StartupLens — AI Investor Intelligence Dashboard
 
-StartupLens is an interactive Streamlit dashboard that helps an investor review startup funding signals and compare three machine-learning classifiers for an operating-versus-failed startup label.
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)
+![Models](https://img.shields.io/badge/Models-3-0E7C66)
+![Status](https://img.shields.io/badge/Status-academic%20prototype-C2410C)
 
-This repository packages the dashboard, reproducible training and prediction scripts, saved evaluation outputs, data dictionary inputs, presentation screenshots, and report figures for academic review.
+StartupLens is a modern, interactive Streamlit dashboard for exploring startup funding signals, assessing company-level risk, and comparing three machine-learning classifiers for an operating-versus-failed startup label.
+
+This repository packages the dashboard, reproducible training and prediction scripts, saved evaluation outputs, source workbook, presentation screenshots, report figures, and academic report.
+
+## System architecture
+
+```mermaid
+flowchart LR
+    A[Funding workbook] --> B[Feature preparation]
+    B --> C{4-fold stratified CV}
+    C --> D[Logistic Regression]
+    C --> E[Random Forest]
+    C --> F[Extra Trees]
+    D --> G[Saved metrics + model artifacts]
+    E --> G
+    F --> G
+    G --> H[Streamlit investor dashboard]
+    H --> I[Risk score]
+    H --> J[Sensitivity + what-if analysis]
+    H --> K[CSV / PDF outputs]
+```
+
+## Visual walkthrough
+
+The repository includes dashboard screenshots and presentation-ready charts so the project can be reviewed without installing the app first.
+
+![Model comparison](docs/figures/model_performance.png)
+
+![Dashboard home](docs/screenshots/ss_home.png)
 
 ## What to look at first
 
