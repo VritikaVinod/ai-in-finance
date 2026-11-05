@@ -1,0 +1,4 @@
+model,accuracy,balanced_accuracy,precision_failure,recall_failure,f1_failure,roc_auc,pr_auc_average_precision,true_negatives,false_positives,false_negatives,true_positives,threshold
+Logistic Regression,0.9585798816568047,0.5625,1.0,0.125,0.2222222222222222,0.7569875776397517,0.28768237037898164,161,0,7,1,0.5
+Random Forest,0.9526627218934911,0.5,0.0,0.0,0.0,0.5559006211180124,0.1137279598849049,161,0,8,0,0.5
+Extra Trees,0.9526627218934911,0.5,0.0,0.0,0.0,0.5062111801242236,0.06566412056978968,161,0,8,0,0.5
