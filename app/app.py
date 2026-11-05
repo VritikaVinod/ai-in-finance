@@ -121,7 +121,9 @@ div[data-testid="stTabs"] [aria-selected="true"] {
   width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
   background: #0E7C66; color: #F4F1EA; font-family: Fraunces, serif; font-weight: 640;
   font-size: 1.05rem; letter-spacing: -0.04em;
+  animation: sl-float 4s ease-in-out infinite;
 }
+@keyframes sl-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 .sl-kicker { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #0E7C66; font-weight: 700; margin: 0 0 6px; }
 .sl-hero h1 { margin: 0; font-size: 2.15rem; line-height: 1.1; }
 .sl-hero p { margin: 8px 0 0; color: #6B645C; max-width: 46rem; }
@@ -129,7 +131,9 @@ div[data-testid="stTabs"] [aria-selected="true"] {
 .sl-chip {
   background: #FFFCF7; border: 1px solid #E7E1D6; border-radius: 999px;
   padding: 7px 12px; font-size: 0.78rem; color: #3F3A36; font-weight: 600;
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
+.sl-chip:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(14,124,102,0.12); }
 .sl-callout {
   background: #FFFCF7; border: 1px solid #E7E1D6; border-radius: 18px; padding: 16px 18px; margin: 8px 0 16px;
 }
