@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+*.log
+streamlit.log
+
+# Local exports and scratch files
+startup_predictions.csv
+work/
+outputs/
+
+# Keep only the selected final report in the published documentation set
+docs/screenshots/_*.docx
+
